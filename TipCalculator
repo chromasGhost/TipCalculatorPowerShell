@@ -5,12 +5,12 @@
 
 
 if($bill -as [double] -and $tip -as [double]) {
-$tipPercent = $tip / 100;
-$dollarAmountTip = $tipPercent * $bill;
-$total = $bill + $dollarAmountTip;
+    $tipPercent = $tip / 100;
+    $dollarAmountTip = $tipPercent * $bill;
+    $total = $bill + $dollarAmountTip;
 
-Write-Host -NoNewline "Tip amount $"; "{0:N2}" -f $dollarAmountTip; 
-Write-Host -NoNewline "Bill amount $"; "{0:N2}" -f $total; 
+    Write-Host -NoNewline "Tip amount $"; "{0:N2}" -f $dollarAmountTip; 
+    Write-Host -NoNewline "Bill amount $"; "{0:N2}" -f $total; 
 }
 else {
     Write-Host "You did not enter a valid number in bill or tip amount.";
